@@ -72,16 +72,16 @@ public class TicTacToeGame extends JFrame implements ActionListener {
         return true;
     }
 
-//    private void resetGame() {
-//        for (JButton[] row : buttons) {
-//            for (JButton button : row) {
-//                button.setText("");
-//            }
-//        }
-//        playerX = true;
-//    }
-//
-//    public static void main(String[] args) {
-//        SwingUtilities.invokeLater(() -> new TicTacToeGame().setVisible(true));
-//    }
+    private void resetGame() {
+        for (JButton[] row : buttons) {
+            for (JButton button : row) {
+                button.setText("");
+            }
+        }
+        playerX = true;
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new TicTacToeGame().setVisible(true));
+    }
 }
