@@ -57,21 +57,21 @@ public class TicTacToeGame extends JFrame implements ActionListener {
                 checkLine(buttons[0][2], buttons[1][1], buttons[2][0]);
     }
 
-//    private boolean checkLine(JButton b1, JButton b2, JButton b3) {
-//        return !b1.getText().equals("") &&
-//                b1.getText().equals(b2.getText()) &&
-//                b2.getText().equals(b3.getText());
-//    }
+    private boolean checkLine(JButton b1, JButton b2, JButton b3) {
+        return !b1.getText().equals("") &&
+                b1.getText().equals(b2.getText()) &&
+                b2.getText().equals(b3.getText());
+    }
 
-//    private boolean isBoardFull() {
-//        for (JButton[] row : buttons) {
-//            for (JButton button : row) {
-//                if (button.getText().equals("")) return false;
-//            }
-//        }
-//        return true;
-//    }
-//
+    private boolean isBoardFull() {
+        for (JButton[] row : buttons) {
+            for (JButton button : row) {
+                if (button.getText().equals("")) return false;
+            }
+        }
+        return true;
+    }
+
 //    private void resetGame() {
 //        for (JButton[] row : buttons) {
 //            for (JButton button : row) {
