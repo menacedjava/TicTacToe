@@ -8,24 +8,24 @@ public class TicTacToeGame extends JFrame implements ActionListener {
     private JButton[][] buttons = new JButton[3][3];
     private boolean playerX = true; // X boshlaydi
 
-//    public TicTacToeGame() {
-//        setTitle("Tic Tac Toe");
-//        setSize(400, 400);
-//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        setLocationRelativeTo(null);
-//        setLayout(new GridLayout(3, 3));
-//
-//        // 3x3 maydon yaratish
-//        for (int row = 0; row < 3; row++) {
-//            for (int col = 0; col < 3; col++) {
-//                buttons[row][col] = new JButton("");
-//                buttons[row][col].setFont(new Font("Arial", Font.BOLD, 60));
-//                buttons[row][col].setFocusPainted(false);
-//                buttons[row][col].addActionListener(this);
-//                add(buttons[row][col]);
-//            }
-//        }
-//    }
+    public TicTacToeGame() {
+        setTitle("Tic Tac Toe");
+        setSize(400, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setLayout(new GridLayout(3, 3));
+
+
+        for (int row = 0; row < 3; row++) {
+            for (int col = 0; col < 3; col++) {
+                buttons[row][col] = new JButton("");
+                buttons[row][col].setFont(new Font("Arial", Font.BOLD, 60));
+                buttons[row][col].setFocusPainted(false);
+                buttons[row][col].addActionListener(this);
+                add(buttons[row][col]);
+            }
+        }
+    }
 
 //    @Override
 //    public void actionPerformed(ActionEvent e) {
