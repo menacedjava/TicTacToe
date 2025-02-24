@@ -27,35 +27,35 @@ public class TicTacToeGame extends JFrame implements ActionListener {
         }
     }
 
-//    @Override
-//    public void actionPerformed(ActionEvent e) {
-//        JButton clickedButton = (JButton) e.getSource();
-//        if (!clickedButton.getText().equals("")) return;
-//
-//        // O‘yinchi navbati
-//        clickedButton.setText(playerX ? "X" : "O");
-//        clickedButton.setForeground(playerX ? Color.RED : Color.BLUE);
-//        playerX = !playerX;
-//
-//        // G‘olibni tekshirish
-//        if (checkWinner()) {
-//            JOptionPane.showMessageDialog(this, (playerX ? "O" : "X") + " wins!");
-//            resetGame();
-//        } else if (isBoardFull()) {
-//            JOptionPane.showMessageDialog(this, "Draw!");
-//            resetGame();
-//        }
-//    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        JButton clickedButton = (JButton) e.getSource();
+        if (!clickedButton.getText().equals("")) return;
 
-//    private boolean checkWinner() {
-//        // Yutuqni tekshirish
-//        for (int i = 0; i < 3; i++) {
-//            if (checkLine(buttons[i][0], buttons[i][1], buttons[i][2]) ||
-//                    checkLine(buttons[0][i], buttons[1][i], buttons[2][i])) return true;
-//        }
-//        return checkLine(buttons[0][0], buttons[1][1], buttons[2][2]) ||
-//                checkLine(buttons[0][2], buttons[1][1], buttons[2][0]);
-//    }
+
+        clickedButton.setText(playerX ? "X" : "O");
+        clickedButton.setForeground(playerX ? Color.RED : Color.BLUE);
+        playerX = !playerX;
+
+
+        if (checkWinner()) {
+            JOptionPane.showMessageDialog(this, (playerX ? "O" : "X") + " wins!");
+            resetGame();
+        } else if (isBoardFull()) {
+            JOptionPane.showMessageDialog(this, "Draw!");
+            resetGame();
+        }
+    }
+
+    private boolean checkWinner() {
+        // Yutuqni tekshirish
+        for (int i = 0; i < 3; i++) {
+            if (checkLine(buttons[i][0], buttons[i][1], buttons[i][2]) ||
+                    checkLine(buttons[0][i], buttons[1][i], buttons[2][i])) return true;
+        }
+        return checkLine(buttons[0][0], buttons[1][1], buttons[2][2]) ||
+                checkLine(buttons[0][2], buttons[1][1], buttons[2][0]);
+    }
 
 //    private boolean checkLine(JButton b1, JButton b2, JButton b3) {
 //        return !b1.getText().equals("") &&
