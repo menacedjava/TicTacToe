@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 public class TicTacToeGame extends JFrame implements ActionListener {
     private JButton[][] buttons = new JButton[3][3];
-    private boolean playerX = true; // X boshlaydi
+    private boolean playerX = true;
 
     public TicTacToeGame() {
         setTitle("Tic Tac Toe");
